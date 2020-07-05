@@ -13,7 +13,7 @@ const socketToRoom = {};
 io.on('connection', socket => {
     socket.on("join room", roomID => {
         if (users[roomID]) {
-            const length = users[roomID].length;
+            // const length = users[roomID].length;
             users[roomID].push(socket.id);
         } else {
             users[roomID] = [socket.id];
